@@ -1,9 +1,9 @@
 export default class Maze {
-  constructor(canvas, context) {
-    this.canvas = canvas;
-    this.context = context;
+  constructor(cvs, ctx) {
+    this.cvs = cvs;
+    this.ctx = ctx;
   }
 
-  canvas;
-  context;
+  cvs;
+  ctx;
 }
