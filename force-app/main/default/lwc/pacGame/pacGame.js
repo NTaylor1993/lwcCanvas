@@ -38,9 +38,9 @@ export default class PacGame extends LightningElement {
       this.pacman = new Pacman(this.cvs, this.ctx);
       this.maze = new Maze(this.cvs, this.ctx);
       this.ghosts.push(new Ghost(this.cvs, this.ctx, "Pinky", 100, 100));
-      this.ghosts.push(new Ghost(this.cvs, this.ctx, "Inky", 110, 110));
-      this.ghosts.push(new Ghost(this.cvs, this.ctx, "Blinky", 120, 120));
-      this.ghosts.push(new Ghost(this.cvs, this.ctx, "Clyde", 130, 130));
+      this.ghosts.push(new Ghost(this.cvs, this.ctx, "Inky", 120, 120));
+      this.ghosts.push(new Ghost(this.cvs, this.ctx, "Blinky", 140, 140));
+      this.ghosts.push(new Ghost(this.cvs, this.ctx, "Clyde", 160, 160));
     }
   }
 
