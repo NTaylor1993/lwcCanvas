@@ -1,3 +1,4 @@
+/* eslint-disable @lwc/lwc/no-async-operation */
 import { LightningElement } from "lwc";
 
 import Pacman from "./gameElements/pacman";
