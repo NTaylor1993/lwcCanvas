@@ -1,0 +1,68 @@
+<template>
+    <lightning-card>
+        <canvas
+            height="270"
+            width="480"
+            style="background: rgb(136, 135, 135);"
+            onkeydown={handleKeyDown}
+        ></canvas>
+        <div>
+            <lightning-button
+                class="slds-p-right_x-small"
+                label="Up"
+                onclick={handleUp}
+            ></lightning-button>
+            <lightning-button
+                class="slds-p-right_x-small"
+                label="Down"
+                onclick={handleDown}
+            ></lightning-button>
+            <lightning-button
+                class="slds-p-right_x-small"
+                label="New Square"
+                onclick={handleNewSquareClick}
+            ></lightning-button>
+            <lightning-button
+                class="slds-p-right_x-small"
+                label="New Circle"
+                onclick={handleNewCircleClick}
+            ></lightning-button>
+            <lightning-button
+                class="slds-p-right_x-small"
+                label="New Pacman"
+                onclick={handleNewPacmanClick}
+            ></lightning-button>
+            <lightning-combobox
+                options={colourOptions}
+                label="Colour"
+                value={colourValue}
+                onchange={handleColourChange}
+            ></lightning-combobox>
+        </div>
+        <div>
+            <lightning-button
+                class="slds-p-right_x-small"
+                label="Left"
+                onmousedown={handleLeft}
+            ></lightning-button>
+            <lightning-button
+                class="slds-p-right_x-small"
+                label="Right"
+                onmousedown={handleRight}
+            ></lightning-button>
+            <lightning-combobox
+                options={pieceOptions}
+                label="Seleceted Piece"
+                value={selectedPiece}
+                onchange={handleSelectedPieceChange}
+            ></lightning-combobox>
+        </div>
+        <div>
+            <lightning-input
+                label="Frame Rate"
+                value={frameRate}
+                onblur={handleFrameRateChange}
+            ></lightning-input>
+        </div>
+    </lightning-card>
+</template>

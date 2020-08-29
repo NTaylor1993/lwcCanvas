@@ -1,0 +1,57 @@
+<template>
+    <lightning-card>
+        <div class="slds-m-bottom_small">
+            <canvas
+                style="
+                    border: 2px solid rgb(136, 135, 135);
+                    background: transparent;
+                "
+                width="600"
+                height="600"
+            ></canvas>
+        </div>
+        <div class="slds-grid">
+            <div class="slds-col">
+                <lightning-button
+                    variant="brand"
+                    label="Clear"
+                    title="Clear"
+                    onclick={handleClearClick}
+                    class="slds-m-left_x-small"
+                ></lightning-button>
+            </div>
+            <div class="slds-col">
+                <lightning-input
+                    value={rVal}
+                    onchange={handleRChange}
+                ></lightning-input>
+            </div>
+            <div class="slds-col">
+                <lightning-input
+                    value={gVal}
+                    onchange={handleGChange}
+                ></lightning-input>
+            </div>
+            <div class="slds-col">
+                <lightning-input
+                    value={bVal}
+                    onchange={handleBChange}
+                ></lightning-input>
+            </div>
+            <div class="slds-col">
+                <lightning-input
+                    value={lineWidth}
+                    onchange={handleLineWidthChange}
+                ></lightning-input>
+            </div>
+        </div>
+        <lightning-input value={downFlag}></lightning-input>
+        {downFlag}
+        <div>
+            {coords}
+        </div>
+        <div>
+            {clientRectBound}
+        </div>
+    </lightning-card>
+</template>
