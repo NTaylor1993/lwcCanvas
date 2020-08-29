@@ -34,6 +34,12 @@ export default class PacGame extends LightningElement {
     if (this.cvs) {
       this.ctx = this.cvs.getContext("2d");
       this.clearContext();
+
+      this.pacman = new Pacman(this.cvs, this.ctx);
+      this.maze = new Maze(this.cvs, this.ctx);
+      for (let i = 0; i < 4; i++) {
+        this.ghosts.push(new Ghost(this.cvs, this.ctx, "Pinky"));
+      }
     }
   }
 
