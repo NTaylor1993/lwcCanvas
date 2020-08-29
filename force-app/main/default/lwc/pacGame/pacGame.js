@@ -15,6 +15,7 @@ export default class PacGame extends LightningElement {
 
   cvs;
   ctx;
+  frameRate = 60;
 
   renderedCallback() {
     if (!this.cvs) {
