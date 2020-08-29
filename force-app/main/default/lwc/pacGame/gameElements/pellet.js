@@ -1,11 +1,11 @@
 export default class Pellet {
-  constructor(canvas, context, isPower = false) {
-    this.canvas = canvas;
-    this.context = context;
+  constructor(cvs, ctx, isPower = false) {
+    this.cvs = cvs;
+    this.ctx = ctx;
     this.isPower = isPower;
   }
 
-  canvas;
-  context;
+  cvs;
+  ctx;
   isPower;
 }
