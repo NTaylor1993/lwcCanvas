@@ -17,6 +17,11 @@ export default class PacGame extends LightningElement {
   ctx;
   frameRate = 60;
 
+  pacman;
+  maze;
+  ghosts = [];
+  pellets = [];
+
   renderedCallback() {
     if (!this.cvs) {
       this.setup();
