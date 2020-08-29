@@ -5,7 +5,6 @@ import Maze from "./gameElements/maze";
 import Pacman from "./gameElements/pacman";
 import Ghost from "./gameElements/ghost";
 import Pellet from "./gameElements/pellet";
-import Maze from "./gameElements/maze";
 
 export default class PacGame extends LightningElement {
   canvasConfig = {
@@ -38,11 +37,10 @@ export default class PacGame extends LightningElement {
 
       this.pacman = new Pacman(this.cvs, this.ctx);
       this.maze = new Maze(this.cvs, this.ctx);
-      for (let i = 0; i < 4; i++) {
-        this.ghosts.push(new Ghost(this.cvs, this.ctx, "Pinky"));
-      this.ghosts.push(new Ghost(this.cvs, this.ctx, "Inky"));
-      this.ghosts.push(new Ghost(this.cvs, this.ctx, "Blinky"));
-      this.ghosts.push(new Ghost(this.cvs, this.ctx, "Clyde"));
+      this.ghosts.push(new Ghost(this.cvs, this.ctx, "Pinky", 100, 100));
+      this.ghosts.push(new Ghost(this.cvs, this.ctx, "Inky", 110, 110));
+      this.ghosts.push(new Ghost(this.cvs, this.ctx, "Blinky", 120, 120));
+      this.ghosts.push(new Ghost(this.cvs, this.ctx, "Clyde", 130, 130));
     }
   }
 
