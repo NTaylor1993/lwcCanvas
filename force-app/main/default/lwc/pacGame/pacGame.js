@@ -1,6 +1,7 @@
 /* eslint-disable @lwc/lwc/no-async-operation */
 import { LightningElement } from "lwc";
 
+import Maze from "./gameElements/maze";
 import Pacman from "./gameElements/pacman";
 import Ghost from "./gameElements/ghost";
 import Pellet from "./gameElements/pellet";
