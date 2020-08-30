@@ -50,6 +50,7 @@ export default class PacGame extends LightningElement {
 
   async renderCycle() {
     this.clearContext();
+    this.maze.draw();
     this.pacman.draw();
 
     this.ghosts.forEach((ghost) => {
